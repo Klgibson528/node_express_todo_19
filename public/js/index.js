@@ -14,10 +14,12 @@
         let todoHTML = ""
         todos.forEach(item => {
             if(item.done == false){
-            todoHTML += `<div class='row' data-id=${item.id}>`
+            todoHTML += `<div class='todoListItem row justify-content-between align-items-center' data-id=${item.id}>`
             todoHTML += `<li>${item.todo}</li>`
-            todoHTML += `<button onClick='deleteTodo(this.id)' name='delete' id=${item.id}> Delete </button>`
-            todoHTML += `<button onClick='completeTodo(this.id)' name='complete' id=${item.id}> Complete </button>`
+            todoHTML += "<div>"
+            todoHTML += `<button class="btn btn-success" onClick='completeTodo(this.id)' name='complete' id=${item.id}> Complete </button>`
+            todoHTML += `<button class="btn btn-danger" onClick='deleteTodo(this.id)' name='delete' id=${item.id}> Delete </button>`
+            todoHTML += "</div>"
             todoHTML += "</div>"
             }
         })
