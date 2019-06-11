@@ -12,7 +12,6 @@ app.use(require("./routes/api"))
 app.use(require("./routes/todos"))
 app.use(require("./routes/add"))
 app.use(require("./routes/done"))
-app.use(require("./routes/update"))
 app.use(require("./routes/delete"))
 
 
