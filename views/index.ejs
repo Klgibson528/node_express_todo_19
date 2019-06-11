@@ -1,0 +1,17 @@
+<% include ./partials/head.ejs %>
+<% include ./partials/nav.ejs %>
+
+<form method="post" action="/add">
+<label>Add a Todo</label>
+<input type="text" id="input" name="input" placeholder="What do you need to do?">
+<button type="submit">Add</button>
+</form>
+
+<div>
+    <ol id="todoList">
+    
+    </ol>
+</div>
+
+
+<% include ./partials/footer.ejs %>
