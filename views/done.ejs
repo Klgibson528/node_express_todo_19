@@ -1,8 +1,11 @@
 <% include ./partials/head.ejs %>
 <% include ./partials/nav.ejs %>
 
+<% if(decide == true){%>
 <h1>Look at all that you've done!</h1>
-
+<% } else {%>
+<h1>You haven't completed any tasks!</h1>
+<% } %>
 <div>
     <ol id="completedTodoList">
 

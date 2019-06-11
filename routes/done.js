@@ -9,7 +9,9 @@ router.use(bodyParser.urlencoded({ extended: false }))
 router.use(bodyParser.json())
 
 router.get("/done", (req, res) => {
-    res.render("done", {todos: todos})
+    var done = todos.map(function (item) { return item.done; })
+    var decide = done.includes(true)
+    res.render("done", { todos: todos, decide: decide })
 })
 
 router.post("/done", (req, res) => {
